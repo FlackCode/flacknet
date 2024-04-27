@@ -1,8 +1,9 @@
 import image from '../image/image.jpg'
+import AboutAccordion from './AboutAccordion'
 export default function About() {
     return(
         <>
-        <div className="hero min-h-screen bg-base-100">
+        <div className="hero min-h-screen bg-base-100 border-b-2">
           <div className="hero-content flex-col">
             <h1 className="text-5xl font-bold underline">About me</h1>
             <div className='hero-content flex-col lg:flex-row xl:max-w-5xl gap-16'>
@@ -12,6 +13,7 @@ export default function About() {
                   <p className="py-6 xl:text-left xsm:text-center">Welcome to my corner of the web. I'm a frontend web developer with a passion for creating sleek and user-friendly applications. Over the last three years, I've honed my skills through dedicated IT courses, making me a knowledgeable PC user and a quick adapter to emerging technologies.</p>
                 </div>
             </div>
+            <AboutAccordion />
           </div>
         </div>
         </>
