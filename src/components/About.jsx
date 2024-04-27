@@ -4,9 +4,9 @@ export default function About() {
     return(
         <>
         <div className="hero min-h-screen bg-base-100 border-b-2">
-          <div className="hero-content flex-col">
+        <div className="hero-content flex-col">
             <h1 className="text-5xl font-bold underline">About me</h1>
-            <div className='hero-content flex-col lg:flex-row xl:max-w-5xl gap-16'>
+            <div className='hero-content flex-col lg:flex-row xl:max-w-5xl xsm:max-w-sm gap-16'>
                 <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
                   <h1 className="text-5xl font-bold xl:text-left xsm:text-center">Hi, I'm Dmitriy, aka Flack!</h1>
