@@ -9,7 +9,7 @@ export default function Navbar() {
                 <h1 className="xl:text-3xl font-bold">flack.net</h1>
             </div>
             <div className="navbar-end">
-                <button className="btn bg-white rounded-xl"><BsEnvelope/> Hire me</button>
+                <button className="btn bg-white rounded-xl" onClick={() => window.location.href = 'mailto:fl4ckc0de@gmail.com'}><BsEnvelope/> Hire me</button>
             </div>
         </div>
         </>

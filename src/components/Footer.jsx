@@ -1,4 +1,4 @@
-import { BsGithub, BsTwitterX, BsInstagram, BsYoutube } from 'react-icons/bs'
+import { BsSend, BsGithub, BsTwitterX, BsInstagram, BsYoutube } from 'react-icons/bs'
 
 export default function Footer() {
     return (
@@ -10,29 +10,29 @@ export default function Footer() {
                     <p>Page made using React, TailwindCSS and DaisyUI</p>
                 </div>
                 <div className="xsm:w-full md:w-1/2">
-                    <form action="mailto:fl4ckc0de@gmail.com" method="post" enctype="text/plain">
+                    <form action="mailto:fl4ckc0de@gmail.com" method="post" encType="text/plain">
                       <h6 className="footer-title">Send Me a Message!</h6>
                       <div className="form-control w-full mb-4">
                           <label className="label">
                               <span className="label-text">Name</span>
                           </label>
-                          <input type="text" placeholder="Your Name" className="input rounded-md"/>
+                          <input type="text" placeholder="Your Name" className="input rounded-md placeholder-black text-black"/>
                       </div>
                       <div className="form-control w-full mb-4">
                           <label className="label">
                               <span className="label-text">Email</span>
                           </label>
-                          <input type="email" placeholder="example@gmail.com" className="input rounded-md" />
+                          <input type="email" placeholder="example@gmail.com" className="input rounded-md placeholder-black text-black" />
                       </div>
                       <div className="form-control w-full mb-4">
                           <label className="label">
                               <span className="label-text">Message</span>
                           </label>
-                          <textarea placeholder="Your Message..." className="textarea rounded-md h-24"></textarea>
+                          <textarea placeholder="Your Message..." className="textarea rounded-md h-24 placeholder-black text-black"></textarea>
                       </div>
-                      <button type="submit" className="btn bg-white w-full mb-4">Send</button>
+                      <button type="submit" className="btn bg-white w-full mb-4"><BsSend/>Send</button>
                     </form>
-                    <div class="flex gap-4 md:justify-normal xsm:justify-center">
+                    <div className="flex gap-4 md:justify-normal xsm:justify-center">
                       <a href="https://github.com/FlackCode" target='_blank'><button className="btn btn-circle"><BsGithub/></button></a>
                       <a href="https://twitter.com/flackjsx" target='_blank'><button className="btn btn-circle"><BsTwitterX/></button></a>
                       <a href="https://www.instagram.com/flackwav/" target='_blank'><button className="btn btn-circle"><BsInstagram/></button></a>
