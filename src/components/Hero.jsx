@@ -20,8 +20,8 @@ export default function Hero() {
                     <a href="https://www.youtube.com/channel/UCV5DS_mBLPdfjpyrTFWYVBg" target='_blank'><button className="btn btn-circle"><BsYoutube/></button></a>
                 </div>
             </div>
-            <div className='xl:w-1/2 md:w-1/2 xsm:w-full flex md:justify-end xsm:justify-center xsm:mb-4 md:mb-0'>
-                <img src={heroImg} alt="" className='w-3/4 rounded-xl'/>
+            <div className='xl:w-1/2 md:w-1/2 xsm:w-full flex md:justify-end xsm:mb-4 md:mb-0'>
+                <img src={heroImg} alt="" className='md:w-3/4 rounded-xl'/>
             </div>
         </div>
         </>

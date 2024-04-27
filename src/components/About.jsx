@@ -22,6 +22,7 @@ export default function About() {
                 I'm diving into game development and exploring the exciting world of machine learning. 
                 I am currently learning languages like C++, Python, and Mojo, and I'm eager to learn these skills to create immersive gaming experiences and explore the frontiers of AI.</p>
             </div>
+            <hr className='md:hidden'/>
             <div className="md:w-1/2 self-end xl:px-4">
               <h1 className="font-bold text-3xl mb-4">My Skills</h1>
               <p className="font-semibold text-lg mb-2">Technologies I know and actively working with to make all of my new projects:</p>
