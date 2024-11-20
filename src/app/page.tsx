@@ -1,12 +1,16 @@
+"use client"
+
 import Image from "next/image";
 import Nav from "~/components/Nav";
+import Projects from "~/components/Projects";
 
-export default async function Home() {
+export default function Home() {
+
   return (
     <main className="bg-[#00000a] text-slate-100 flex flex-col min-h-screen">
       <Nav />
       {/* Home */}
-      <section className="flex flex-grow items-center justify-center min-h-screen" id="home">
+      <section className="flex flex-grow items-center justify-center min-h-screen border-b border-slate-200" id="home">
         <div className="text-center max-w-2xl px-4">
           <p className="font-semibold text-lg text-slate-400">Hi, my name is</p>
           <h1 className="text-6xl font-bold text-white">Flack.</h1>
@@ -26,7 +30,7 @@ export default async function Home() {
       </section>
 
       {/* About */}
-      <section className="h-screen flex items-center justify-center bg-[#00000a] px-8" id="about">
+      <section className="h-screen flex items-center justify-center px-8 border-b border-slate-200" id="about">
         <div className="max-w-4xl flex flex-col md:flex-row gap-12 items-center">
           <Image src={'/image.jpg'} alt="Profile Image" width={256} height={256} className="rounded-lg" />
           <div className="text-slate-100">
@@ -48,7 +52,7 @@ export default async function Home() {
       </section>
 
       {/* Projects */}
-
+      <Projects />
     </main>
   );
 }
