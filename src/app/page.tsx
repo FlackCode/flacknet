@@ -2,9 +2,24 @@
 
 import Image from "next/image";
 import Nav from "~/components/Nav";
-import Projects from "~/components/Projects";
+import { FaGithub, FaInstagram, FaDiscord, FaEnvelope, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { projectsArray } from "~/misc/projects";
+import { useState } from "react";
+import Project from "~/components/Project";
 
 export default function Home() {
+
+  const projects = projectsArray
+
+  const [currentProject, setCurrentProject] = useState(0)
+
+  const handleNext = () => {
+    setCurrentProject((prev) => (prev + 1) % projects.length)
+  }
+
+  const handlePrev = () => {
+    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length)
+  }
 
   return (
     <main className="bg-[#00000a] text-slate-100 flex flex-col min-h-screen">
@@ -52,7 +67,80 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <Projects />
+      <section id="projects" className="min-h-screen bg-[#00000a] flex items-center border-b border-slate-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">My Projects</h2>
+          <div className="flex items-center justify-center">
+            <button
+              onClick={handlePrev}
+              className="bg-[#1a1a2e] hover:bg-[#16213e] text-white font-semibold p-3 rounded-full transition mr-4"
+              aria-label="Previous project"
+            >
+              <FaChevronLeft />
+            </button>
+            <div className="w-full max-w-2xl">
+              <Project {...projects[currentProject]} />
+            </div>
+            <button
+              onClick={handleNext}
+              className="bg-[#1a1a2e] hover:bg-[#16213e] text-white font-semibold p-3 rounded-full transition ml-4"
+              aria-label="Next project"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+          <div className="flex justify-center mt-8">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentProject(index)}
+                className={`h-4 w-4 rounded-full mx-1 ${
+                  index === currentProject ? "bg-[#4a5568]" : "bg-[#2d3748]"
+                }`}
+                aria-label={`Go to project ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="min-h-screen bg-[#00000a] flex items-center justify-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Get in Touch with Me</h2>
+          <div className="bg-[#1a1a2e] rounded-lg p-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <a
+                href="https://github.com/FlackCode"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-slate-950 hover:scale-105 text-white font-semibold py-3 px-6 rounded-lg transition"
+              >
+                <FaGithub className="text-2xl" /> GitHub
+              </a>
+              <a
+                href="https://www.instagram.com/_.flack/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-slate-950 hover:scale-105 text-white font-semibold py-3 px-6 rounded-lg transition"
+              >
+                <FaInstagram className="text-2xl" /> Instagram
+              </a>
+            </div>
+            <div className="mt-8 space-y-4">
+              <div className="flex items-center gap-3 text-gray-400">
+                <FaDiscord className="text-2xl" />
+                <span>Discord: flackkkk</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-400">
+                <FaEnvelope className="text-2xl" />
+                <span>Email: flckonfn@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
