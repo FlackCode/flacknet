@@ -6,7 +6,7 @@ export default async function Home() {
     <main className="bg-[#00000a] text-slate-100 flex flex-col min-h-screen">
       <Nav />
       {/* Home */}
-      <div className="flex flex-grow items-center justify-center min-h-screen">
+      <section className="flex flex-grow items-center justify-center min-h-screen" id="home">
         <div className="text-center max-w-2xl px-4">
           <p className="font-semibold text-lg text-slate-400">Hi, my name is</p>
           <h1 className="text-6xl font-bold text-white">Flack.</h1>
@@ -23,10 +23,10 @@ export default async function Home() {
             looking to improve and learn new technologies.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* About */}
-      <section className="h-screen flex items-center justify-center bg-[#00000a] px-8">
+      <section className="h-screen flex items-center justify-center bg-[#00000a] px-8" id="about">
         <div className="max-w-4xl flex flex-col md:flex-row gap-12 items-center">
           <Image src={'/image.jpg'} alt="Profile Image" width={256} height={256} className="rounded-lg" />
           <div className="text-slate-100">
@@ -46,6 +46,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* Projects */}
+
     </main>
   );
 }
